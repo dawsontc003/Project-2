@@ -1,1 +1,1 @@
-# Project-2
+# Discover your Animal
