@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "",
-    "database": "dbname",
+    "password": "Dynasty1003!",
+    "database": "sequelize_animalDB",
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql"
@@ -24,3 +24,4 @@
     "dialect": "mysql"
   }
 }
+

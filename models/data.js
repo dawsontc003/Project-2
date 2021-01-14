@@ -1,6 +1,9 @@
 module.exports = (sequelize, DataTypes) => {
-  const db = sequelize.define("dbname", {
-    Key: DataTypes.STRING,
+  const animaldb = sequelize.define("animal_score", {
+    name: DataTypes.STRING,
+    q_1: DataTypes.STRING,
+    q_2: DataTypes.STRING,
+    q_3: DataTypes.STRING,
   });
-  return db;
+  return animaldb;
 };
