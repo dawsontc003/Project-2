@@ -26,8 +26,9 @@ module.exports = (app) => {
   // GET route for Recent results
   app.get("/api/recents", (req, res) => {
     // findAll returns all entries for a table when used with no options
-    db.Recents.findAll({}).then((data) => {
+    db.animals_scores.findAll({}).then((data) => {
       // We have access to the recents as an argument inside of the callback function
+      console.log(data);
       res.json(data);
     });
   });
