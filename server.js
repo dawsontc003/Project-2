@@ -14,7 +14,18 @@ app.use(express.json());
 // Set Handlebars.
 const exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// found this to fix our rendering issue here: http://www.prowebguru.com/2020/08/nodejs-express-handlebars-access-denied-resolve-property-solution/#.YAEjeuhKhPY
+
+app.engine(
+  "handlebars",
+  exphbs({
+    defaultLayout: "main",
+    runtimeOptions: {
+      allowProtoPropertiesByDefault: true,
+      allowProtoMethodsByDefault: true,
+    },
+  })
+);
 app.set("view engine", "handlebars");
 
 // Static directory
