@@ -1,7 +1,7 @@
-// still need db table names,
-//  ans1, ans2, ans3, ans4, ans5, userName, points/score, animalImage, animalData
+// // still need db table names,
+// //  ans1, ans2, ans3, ans4, ans5, userName, points/score, animalImage, animalData
 
-// Requiring our models
+// // Requiring our models
 const db = require("../models");
 
 // Routes
@@ -32,7 +32,7 @@ module.exports = (app) => {
   // GET route for Recent results
   app.get("/api/recents", (req, res) => {
     // findAll returns all entries for a table when used with no options
-    db.animaldb.findAll({}).then((data) => {
+    db.Animaldb.findAll({}).then((data) => {
       // We have access to the recents as an argument inside of the callback function
       res.json(data);
     });
