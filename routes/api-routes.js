@@ -30,7 +30,7 @@ module.exports = (app) => {
       const hbsObject = {
         animalObj: data,
       };
-      console.log(data);
+
       res.render("index", hbsObject);
     });
   });
