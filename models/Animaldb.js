@@ -4,6 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     q_1: DataTypes.INTEGER,
     q_2: DataTypes.INTEGER,
     q_3: DataTypes.INTEGER,
+    score: DataTypes.INTEGER,
   });
   return Animaldb;
 };
