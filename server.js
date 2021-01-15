@@ -1,8 +1,15 @@
 const express = require("express");
+const exphbs = require("express-handlebars");
+var bodyParser = require("body-parser");
 
 // Sets up the Express App
 const app = express();
 const PORT = process.env.PORT || 8000;
+
+// Set Handlebars as the default templating engine.
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.use(bodyParser.json());
+app.set("view engine", "handlebars");
 
 // Requiring our models for syncing
 const db = require("./models");
