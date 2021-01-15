@@ -1,6 +1,3 @@
-// // still need db table names,
-// //  ans1, ans2, ans3, ans4, ans5, userName, points/score, animalImage, animalData
-
 // // Requiring our models
 const db = require("../models");
 
@@ -30,9 +27,11 @@ module.exports = (app) => {
     // findAll returns all entries for a table when used with no options
     db.Animaldb.findAll({}).then((data) => {
       // We have access to the recents as an argument inside of the callback function
-      // const animalObj = { animalObject: data };
+      const hbsObject = {
+        animalObj: data,
+      };
       console.log(data);
-      res.render("index", data);
+      res.render("index", hbsObject);
     });
   });
 
