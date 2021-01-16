@@ -12,7 +12,40 @@
 {{#each animalObj}}
 <p>{{this.q_1}} </p>
 {{/each}}
-<p>A <input type="radio" id="30" name="answer"></p>
-<p>B <input type="radio" id="20" name="answer"></p>
-<p>C <input type="radio" id="10" name="answer"></p>
-<button>Submit</button>
+{{!-- <p>A<input type="radio" value="30" name="answer"></p>
+<p>B <input type="radio" value="20" name="answer"></p>
+<p>C <input type="radio" value="10" name="answer"></p> --}}
+<div class="resultscore">
+    <input type="radio" name="test" value="30" /> A
+    <br><input type="radio" name="test" value="20" /> B
+    <br><input type="radio" name="test" value="10" /> C
+</div>
+<button id="submit">Submit</button>
+
+
+<script type="text/javascript">
+    console.log("js script working")
+    console.log("-----------------")
+
+    const submitQ1 = document.getElementById('submit')
+
+    $('.resultscore input[type="radio"]').click(function () {
+        const demovalue = $(this).val();
+
+        submitQ1.addEventListener('click', () => {
+
+            console.log(demovalue)
+
+
+        })
+    });
+
+
+
+
+
+
+
+
+
+</script>
