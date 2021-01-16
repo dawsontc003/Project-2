@@ -7,27 +7,6 @@
 document.addEventListener("DOMContentLoaded", (e) => {
   console.log("dom loaded!");
 
-  const nameEntry = document.getElementById("userName");
-
-  let scores = [];
-
-  const scoreKeeper = () => {
-    fetch("api/recents", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success in getting score:", data);
-        console.log(data);
-        scores = data;
-      });
-  };
-
-  // scoreKeeper();
-
   const animalDesc = () => {
     // testApp() and place data into handlebars field for animal description
   };
@@ -35,10 +14,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
   function testApp() {
     $.ajax({
       type: "get",
-      url: `https://www.dictionaryapi.com/api/v3/references/collegiate/json/snake?key=${apiKeyM}`,
+      url: `https://www.dictionaryapi.com/api/v3/references/collegiate/json/snake?key=2f19cdcb-c4b2-4508-a21c-7b48e35dbd48`,
     }).then(function (response) {
-      console.log(response);
-      const definition = response[0].shortdef[2];
+      let definition = response[0].shortdef[0];
+      console.log(definition);
     });
   }
 
