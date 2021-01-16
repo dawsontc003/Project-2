@@ -1,5 +1,6 @@
 Team Name: Team Tyler #2
 Discover Your Animal
+
 Summary
 Team Tyler #2 has designed a website that is constructed to 
 
@@ -10,7 +11,6 @@ Files
 There are a total of 
 
 Database
-
 
 
 API
@@ -27,6 +27,5 @@ HTML Each of the five HMTL files are "mobile friendly" which adjusts the screen 
 
 User Instructions
 The user can launch from the main index HTML page by clicking 
-
 
 Live Application: https://github.com/dawsontc003/discover-your-animal
