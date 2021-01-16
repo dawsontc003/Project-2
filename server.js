@@ -4,6 +4,11 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 8000;
 
+// Environmental variables for storing API keys
+require("dotenv").config();
+const apiKeyM = process.env.API_KEY_MERRIAM;
+const apiKeyTwo = process.env.API_KEY_TWO;
+
 // Requiring our models for syncing
 const db = require("./models");
 
