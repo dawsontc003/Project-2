@@ -8,9 +8,11 @@ module.exports = (app) => {
     db.Animaldb.create({
       name: req.body.name,
       a_1: req.body.a_1,
-      b_2: req.body.b_2,
-      c_3: req.body.c_3,
+      a_2: req.body.a_2,
+      a_3: req.body.a_3,
+      score: req.body.score,
     }).then((data) => res.json(data));
+    // console.log("post route worked");
   });
 
   // PUT route - update
