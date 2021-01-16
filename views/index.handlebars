@@ -16,9 +16,9 @@
 <p>B <input type="radio" value="20" name="answer"></p>
 <p>C <input type="radio" value="10" name="answer"></p> --}}
 <div class="resultscore1">
-    <input type="radio" name="ques1" value="30" /> A
-    <br><input type="radio" name="ques1" value="20" /> B
-    <br><input type="radio" name="ques1" value="10" /> C
+    <input type="radio" name="ques1" value=30 /> A
+    <br><input type="radio" name="ques1" value=20 /> B
+    <br><input type="radio" name="ques1" value=10 /> C
 </div>
 
 {{#each animalObj}}
@@ -28,9 +28,9 @@
 <p>B <input type="radio" value="20" name="answer"></p>
 <p>C <input type="radio" value="10" name="answer"></p> --}}
 <div class="resultscore2">
-    <input type="radio" name="ques2" value="30" /> A
-    <br><input type="radio" name="ques2" value="20" /> B
-    <br><input type="radio" name="ques2" value="10" /> C
+    <input type="radio" name="ques2" value=30 /> A
+    <br><input type="radio" name="ques2" value=20 /> B
+    <br><input type="radio" name="ques2" value=10 /> C
 </div>
 
 {{#each animalObj}}
@@ -40,9 +40,9 @@
 <p>B <input type="radio" value="20" name="answer"></p>
 <p>C <input type="radio" value="10" name="answer"></p> --}}
 <div class="resultscore3">
-    <input type="radio" name="ques3" value="30" /> A
-    <br><input type="radio" name="ques3" value="20" /> B
-    <br><input type="radio" name="ques3" value="10" /> C
+    <input type="radio" name="ques3" value=30 /> A
+    <br><input type="radio" name="ques3" value=20 /> B
+    <br><input type="radio" name="ques3" value=10 /> C
 </div>
 <button id="submit">Submit</button>
 
@@ -50,6 +50,8 @@
 <script type="text/javascript">
     console.log("js script working")
     console.log("-----------------")
+    totalScore = [];
+    const playerName = "AppPost";
 
     const submitQ1 = document.getElementById('submit')
 
@@ -59,6 +61,7 @@
         submitQ1.addEventListener('click', () => {
 
             console.log(answervalue1)
+            totalScore.push(answervalue1)
 
         })
     });
@@ -69,6 +72,7 @@
         submitQ1.addEventListener('click', () => {
 
             console.log(answervalue2)
+            totalScore.push(answervalue2)
 
         })
     });
@@ -79,6 +83,36 @@
         submitQ1.addEventListener('click', () => {
 
             console.log(answervalue3)
+            totalScore.push(answervalue3)
+            console.log(totalScore)
+            console.log(playerName)
+
+            const sum = (numOne, numTwo, numThree) => numOne + numTwo + numThree;
+
+            const addCallBacks = (functionOne) =>
+                functionOne(parseInt(totalScore[0]), parseInt(totalScore[1]), parseInt(totalScore[2]));
+            let combinedScore = addCallBacks(sum)
+            console.log(combinedScore);
+            console.log("-------------seperation for fetchpost---------------")
+            let dataPost = {
+                name: playerName,
+                a_1: totalScore[0],
+                a_2: totalScore[1],
+                a_3: totalScore[2],
+                score: combinedScore
+            };
+            console.log(dataPost)
+            fetch(`/api/questions`, {
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dataPost)
+            }).then(() => {
+                // Reload the page
+                console.log("post made")
+            })
 
         })
     });
