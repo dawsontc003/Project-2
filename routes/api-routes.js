@@ -7,9 +7,9 @@ module.exports = (app) => {
   app.post("/api/questions", (req, res) => {
     db.Animaldb.create({
       name: req.body.name,
-      q_1: req.body.q_1,
-      q_2: req.body.q_2,
-      q_3: req.body.q_3,
+      a_1: req.body.a_1,
+      b_2: req.body.b_2,
+      c_3: req.body.c_3,
     }).then((data) => res.json(data));
   });
 
