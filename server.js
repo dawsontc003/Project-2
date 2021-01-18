@@ -1,5 +1,5 @@
 const express = require("express");
-
+const path = require("path");
 // Sets up the Express App
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -34,7 +34,7 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Static directory
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public"), { index: "_" }));
 
 // Routes
 require("./routes/api-routes.js")(app);
