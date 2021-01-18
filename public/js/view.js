@@ -7,42 +7,31 @@
 document.addEventListener("DOMContentLoaded", (e) => {
   console.log("dom loaded!");
 
-  const nameEntry = document.getElementById("userName");
-
-  let scores = [];
-
-  const scoreKeeper = () => {
+  const update = (input) => {
     fetch("api/recents", {
-      method: "GET",
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
+      body: JSON.stringify(input),
     })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success in getting score:", data);
-        console.log(data);
-        scores = data;
-      });
-  };
-
-  // scoreKeeper();
-
-  const animalDesc = () => {
-    // testApp() and place data into handlebars field for animal description
+      .then(() => {
+        window.location.reload();
+      })
+      .catch((err) => console.error(err));
   };
 
   function testApp() {
     $.ajax({
       type: "get",
-      url: `https://www.dictionaryapi.com/api/v3/references/collegiate/json/snake?key=${apiKeyM}`,
+      url: `https://www.dictionaryapi.com/api/v3/references/collegiate/json/snake?key=2f19cdcb-c4b2-4508-a21c-7b48e35dbd48`,
     }).then(function (response) {
-      console.log(response);
-      const definition = response[0].shortdef[2];
+      let definition = response[0].shortdef[0];
+      console.log(definition);
     });
   }
 
-  testApp();
+  // testApp();
 
   // SUM of a_1, a_2, a_3, from Animaldb, take total score, from 3 to 9 and compare to table of animals
   // switch statement (Animalsdb.score = 3, fetch animal image, description from API/APIs
