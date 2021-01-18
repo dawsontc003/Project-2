@@ -51,44 +51,30 @@
     console.log("js script working")
     console.log("-----------------")
     totalScore = [];
-    const playerName = "AppPost2";
-
+    const playerName = "AppPost";
     const submitQ1 = document.getElementById('submit')
-
     $('.resultscore1 input[type="radio"]').click(function () {
         const answervalue1 = $(this).val();
-
         submitQ1.addEventListener('click', () => {
-
             console.log(answervalue1)
             totalScore.push(answervalue1)
-
         })
     });
-
     $('.resultscore2 input[type="radio"]').click(function () {
         const answervalue2 = $(this).val();
-
         submitQ1.addEventListener('click', () => {
-
             console.log(answervalue2)
             totalScore.push(answervalue2)
-
         })
     });
-
     $('.resultscore3 input[type="radio"]').click(function () {
         const answervalue3 = $(this).val();
-
         submitQ1.addEventListener('click', () => {
-
             console.log(answervalue3)
             totalScore.push(answervalue3)
             console.log(totalScore)
             console.log(playerName)
-
             const sum = (numOne, numTwo, numThree) => numOne + numTwo + numThree;
-
             const addCallBacks = (functionOne) =>
                 functionOne(parseInt(totalScore[0]), parseInt(totalScore[1]), parseInt(totalScore[2]));
             let combinedScore = addCallBacks(sum)
@@ -113,15 +99,6 @@
                 // Reload the page
                 console.log("post made")
             })
-
         })
     });
-
-
-
-
-
-
-
-
 </script>
