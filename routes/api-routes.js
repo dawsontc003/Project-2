@@ -16,12 +16,13 @@ module.exports = (app) => {
   });
 
   // PUT route - update
-  app.put("/api/revise", (req, res) => {
+  app.put("/api/recents", (req, res) => {
     // Use the sequelize update method to update quiz answers
-    db.Animaldb.update(
-      { name: req.body.name, score: req.body.score },
-      { where: { id: req.body.id } }
-    ).then((data) => res.json(data));
+    db.Animaldb.update(req.body, {
+      where: {
+        id: req.body.id,
+      },
+    }).then((data) => res.json(data));
   });
 
   // GET route for Recent results
