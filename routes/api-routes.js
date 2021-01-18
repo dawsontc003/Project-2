@@ -20,9 +20,8 @@ module.exports = (app) => {
     // console.log("post route worked");
   });
 
-  // PUT route - update
+  // PUT route - update currently updates whatever key:values are passed into it
   app.put("/api/recents", (req, res) => {
-    // Use the sequelize update method to update quiz answers
     db.Animaldb.update(req.body, {
       where: {
         id: req.body.id,
