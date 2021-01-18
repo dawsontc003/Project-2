@@ -3,6 +3,11 @@ const db = require("../models");
 
 // Routes
 module.exports = (app) => {
+  // static home page
+  app.get("/", (req, res) => {
+    res.render("home");
+  });
+
   // POST route for questions after START
   app.post("/api/questions", (req, res) => {
     db.Animaldb.create({

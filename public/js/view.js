@@ -7,8 +7,18 @@
 document.addEventListener("DOMContentLoaded", (e) => {
   console.log("dom loaded!");
 
-  const animalDesc = () => {
-    // testApp() and place data into handlebars field for animal description
+  const update = (input) => {
+    fetch("api/recents", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(input),
+    })
+      .then(() => {
+        window.location.reload();
+      })
+      .catch((err) => console.error(err));
   };
 
   function testApp() {
@@ -21,7 +31,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     });
   }
 
-  testApp();
+  // testApp();
 
   // SUM of a_1, a_2, a_3, from Animaldb, take total score, from 3 to 9 and compare to table of animals
   // switch statement (Animalsdb.score = 3, fetch animal image, description from API/APIs
