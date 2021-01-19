@@ -3,26 +3,19 @@
 
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-	<link rel="stylesheet" href="/css/style.css" type="text/css" />
 	<title>Discover Your Inner Animal</title>
-	<script src="/js/view.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
-	<link rel="stylesheet" href="./css/style.css" />
+	<link rel="stylesheet" href="/css/style.css" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 
 <body>
 	<nav>
 		<div class="nav-wrapper">
-			<a href="./index.html" class="brand-logo" id="brand-logo">Discover Your Own Animal</a>
-			<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material">Parks</i></a>
+			<a href="/" class="brand-logo" id="brand-logo">Discover Your Own Animal</a>
 			<ul class="right hide-on-med-and-down">
-				<li><a href="./main.handlebarsFINAL.html">Home</a></li>
-				<li><a href="./Questions.html">Questions</a></li>
-				<li><a href="./Results.HTML">Results</a></li>
-				<li><a href="./RecordRecentAnimals.html">Recent Animals</a></li>
+				<li><a href="/">Home</a></li>
+				<li><a href="/api/recents">Recent Animals</a></li>
 				</li>
 			</ul>
 		</div>
@@ -63,16 +56,10 @@
 					<h5 class="white-text">Pages</h5>
 					<ul>
 						<li>
-							<a class="grey-text text-lighten-3" href="./main.handlebarsFINAL.html">Home</a>
+							<a class="grey-text text-lighten-3" href="/">Home</a>
 						</li>
 						<li>
-							<a class="grey-text text-lighten-3" href="./Questions.html">Questions</a>
-						</li>
-						<li>
-							<a class="grey-text text-lighten-3" href="./Results.HTML">Results</a>
-						</li>
-						<li>
-							<a class="grey-text text-lighten-3" href="./RecordRecentAnimals.html">Recent Animals</a>
+							<a class="grey-text text-lighten-3" href="/api/recents">Recent Animals</a>
 						</li>
 					</ul>
 				</div>
@@ -86,6 +73,8 @@
 			</div>
 		</div>
 	</footer>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="/js/view.js"></script>
 </body>
 
 </html>

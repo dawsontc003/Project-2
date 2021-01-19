@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 8000;
 // Environmental variables for storing API keys
 require("dotenv").config();
 const apiKeyM = process.env.API_KEY_MERRIAM;
-const apiKeyTwo = process.env.API_KEY_TWO;
+const apiKeyP = process.env.API_KEY_PEXELS;
 
 // Requiring our models for syncing
 const db = require("./models");
@@ -38,6 +38,7 @@ app.use(express.static(path.join(__dirname, "public"), { index: "_" }));
 
 // Routes
 require("./routes/api-routes.js")(app);
+require("./routes/third-party-api-routes");
 
 // Syncing our sequelize models and then starting our Express app
 db.sequelize.sync().then(() => {
