@@ -5,7 +5,7 @@
 		<link rel="stylesheet" href="/public/css/styles.css" type="text/css" />
 		<title>Discover Your Inner Animal</title>
 		<script src="/public/js/view.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link rel="stylesheet" href="./css/style.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 	</head>
@@ -13,17 +13,22 @@
 
 	<nav>
     <div class="nav-wrapper">
-      <a href="./index.html" class="brand-logo" id="brand-logo">Discover Your Own Animal</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material">Parks</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="./main.handlebarsFINAL.html">Home</a></li>
-        <li><a href="./Questions.html">Questions</a></li>
-        <li><a href="./Results.HTML">Results</a></li>
-        <li><a href="./RecordRecentAnimals.html">Recent Animals</a></li>
-        </li>
-      </ul>
+      <!-- <a href="./index.html" class="brand-logo" id="brand-logo">Discover Your Own Animal</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material"></i></a> -->
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Discover Your Own Animal</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="./main.handlebarsFINAL.html">Home</a></li>
+            <li><a href="./Questions.html">Questions</a></li>
+            <li><a href="./Results.HTML">Results</a></li>
+            <li><a href="./RecordRecentAnimals.html">Recent Animals</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>
-  </nav>  
+  </nav> 
+  <br> 
   <div class="containerInfo">
     <div class="row">
       <div class="mobileStack">
@@ -38,13 +43,13 @@
     </div>
   </div>
   <div>
-  <form action="1">
+  <form action="#">
     <p class = "questions">What is your favorite type of food?</p>
     <p>
       <label>
-        <input name="group1" type="radio" checked />
+        <input class="with-gap" id="#" name="group1" type="radio" />
         <span>Red</span>
-      </label>
+        </label>
     </p>
     <p>
       <label>
