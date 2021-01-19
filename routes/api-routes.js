@@ -17,10 +17,7 @@ module.exports = (app) => {
     });
   });
   // POST route for questions after START
-  app.post("/api/questions", (req, res) => {
-    const hbsObject = {
-      animalObj: data,
-    };
+  app.post("/api/questions/:id", (req, res) => {
     db.Animaldb.create({
       name: req.body.name,
       a_1: req.body.a_1,
@@ -28,7 +25,7 @@ module.exports = (app) => {
       a_3: req.body.a_3,
       score: req.body.score,
     }).then((data) => res.json(data));
-    res.render("questions", hbsObject);
+    res.render("questions");
   });
 
   // PUT route - update currently updates whatever key:values are passed into it
