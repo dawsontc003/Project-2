@@ -18,80 +18,69 @@ section p {
   font-size: 25px;
   float: left;
   margin: 150px;
-  
 }
-#Test {
-margin-left: 100px;
-margin-top: -100px;
 
+#Test {
+  margin-left: 100px;
+  margin-top: -100px;
 }
 
 .question1 {
   font-size: large;
-
-    
-  }
+}
 
 #Test1 {
   margin-left: 100px;
   margin-top: -100px;
-    
-  }
+}
 
-  
 #Test2 {
   margin-left: 100px;
   margin-top: -100px;
-    
-  }
- 
-  
+}
+
 .containerI {
-border-style: solid;
-border-color: black;
-border-width: 5px;
-left: 150px;
-height: 300px;
-width: 250%;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  left: 150px;
+  height: 300px;
+  width: 250%;
 }
 
 .mobileStack {
   margin-left: 650px;
   margin-top: 100px;
-  }
+}
 
 .mobileStack1 {
   margin-left: 650px;
   margin-top: 100px;
-  }
+}
 
-  #button {
+#button {
   color: blue;
   background-color: gray;
   font-size: 75px;
   margin-left: 650px;
   width: 400px;
   height: 125px;
-  }
+}
 
 #Test3 {
   margin-left: 100px;
   margin-top: -100px;
-    
-  }
+}
 
-    
 #Test4 {
   margin-left: 100px;
   margin-top: -100px;
-    
-  }
+}
 
-  #Test5 {
-    margin-left: 100px;
-    margin-top: -100px;
-      
-    }
+#Test5 {
+  margin-left: 100px;
+  margin-top: -100px;
+}
 
 .card-img-top {
   width: 600px;

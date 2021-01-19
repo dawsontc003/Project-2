@@ -7,9 +7,20 @@ module.exports = (app) => {
   app.get("/", (req, res) => {
     res.render("home");
   });
-
+  // questions page
+  app.get("/api/questions", (req, res) => {
+    db.Animaldb.findAll({}).then((data) => {
+      const hbsObject = {
+        animalObj: data,
+      };
+      res.render("questions", hbsObject);
+    });
+  });
   // POST route for questions after START
   app.post("/api/questions", (req, res) => {
+    const hbsObject = {
+      animalObj: data,
+    };
     db.Animaldb.create({
       name: req.body.name,
       a_1: req.body.a_1,
@@ -17,7 +28,7 @@ module.exports = (app) => {
       a_3: req.body.a_3,
       score: req.body.score,
     }).then((data) => res.json(data));
-    // console.log("post route worked");
+    res.render("questions", hbsObject);
   });
 
   // PUT route - update currently updates whatever key:values are passed into it
@@ -37,8 +48,7 @@ module.exports = (app) => {
       const hbsObject = {
         animalObj: data,
       };
-
-      res.render("index", hbsObject);
+      res.render("recents", hbsObject);
     });
   });
 
