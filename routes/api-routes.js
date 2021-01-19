@@ -17,7 +17,7 @@ module.exports = (app) => {
     });
   });
   // POST route for questions after START
-  app.post("/api/questions/:id", (req, res) => {
+  app.post("/api/questions", (req, res) => {
     db.Animaldb.create({
       name: req.body.name,
       a_1: req.body.a_1,
@@ -29,7 +29,7 @@ module.exports = (app) => {
   });
 
   // PUT route - update currently updates whatever key:values are passed into it
-  app.put("/api/recents", (req, res) => {
+  app.put("/api/questions/:id", (req, res) => {
     db.Animaldb.update(req.body, {
       where: {
         id: req.body.id,
