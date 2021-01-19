@@ -61,8 +61,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
           score: combinedScore,
         };
         console.log(dataPost);
-        fetch(`/api/questions/:id`, {
-          method: "PUT",
+        fetch(`/api/questions`, {
+          method: "POST",
           headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
@@ -80,19 +80,19 @@ document.addEventListener("DOMContentLoaded", (e) => {
   };
   score();
 
-  const start = () => {
-    fetch("api/questions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(),
-    }).catch((err) => console.error(err));
-  };
-  const startButton = document.getElementById("button");
-  $(".start").click(function () {
-    startButton.addEventListener("click", () => {
-      start();
-    });
-  });
+  // const start = () => {
+  //   fetch("api/questions", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(),
+  //   }).catch((err) => console.error(err));
+  // };
+  // const startButton = document.getElementById("button");
+  // $(".start").click(function () {
+  //   startButton.addEventListener("click", () => {
+  //     start();
+  //   });
+  // });
 });
