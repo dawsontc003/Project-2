@@ -129,16 +129,16 @@ header {
   font-size: medium;
 }
 
-footer {
+.page-footer {
   margin-top: 650px;
   align-items: center;
   padding: 20px;
-  background-color: rgb(154, 161, 161);
+  background-color:  #0796f6;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   text-align: center;
   text-emphasis: bold;
-  font-size: 30px;
+  font-size: 25px;
   clear: both;
 }
 /* media query, resize the screen if needed */
