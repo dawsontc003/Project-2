@@ -95,4 +95,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
   //     start();
   //   });
   // });
+
+  const animalDescription = (animalName) => {};
 });

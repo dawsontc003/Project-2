@@ -7,7 +7,7 @@ const pexels = require("pexels").createClient;
 const client = pexels(apiKeyP);
 
 module.exports = () => {
-  const merriam = (searchTerm) => {
+  const Merriam = (searchTerm) => {
     axios
       .get(
         `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${searchTerm}?key=${apiKeyM}`
@@ -17,6 +17,7 @@ module.exports = () => {
         console.log(response.headers);
       });
   };
+
   const imageApi = (searchImage) => {
     client.photos
       .search({

@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     q_1: DataTypes.STRING,
     q_2: DataTypes.STRING,
     q_3: DataTypes.STRING,
+    result: DataTypes.STRING,
   });
   return Animaldb;
 };

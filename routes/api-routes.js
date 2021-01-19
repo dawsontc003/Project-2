@@ -1,5 +1,6 @@
 // // Requiring our models
 const db = require("../models");
+// const merriam = require("./third-party-api-routes").Merriam();
 
 // Routes
 module.exports = (app) => {
@@ -23,6 +24,7 @@ module.exports = (app) => {
       a_1: req.body.a_1,
       a_2: req.body.a_2,
       a_3: req.body.a_3,
+      result: req.body.result,
       score: req.body.score,
     }).then((data) => res.json(data));
     res.render("questions");
@@ -32,9 +34,21 @@ module.exports = (app) => {
   app.put("/api/questions/:id", (req, res) => {
     db.Animaldb.update(req.body, {
       where: {
-        id: req.body.id,
+        id: req.params.id,
       },
     }).then((data) => res.json(data));
+  });
+
+  // GET route for results
+  app.get("/api/results/:id", (req, res) => {
+    db.Animaldb.findOne({
+      where: { id: req.params.id },
+    }).then((data) => {
+      const resultAnimal = {
+        animalObj: data,
+      };
+      res.render("results", resultAnimal);
+    });
   });
 
   // GET route for Recent results
