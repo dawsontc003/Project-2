@@ -144,3 +144,26 @@ footer {
 .page-footer {
   text-align: center;
 }
+
+#mainPhoto {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1px;
+  width: 80%;
+  height: 400px;
+}
+
+.mainDescription {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  text-align: left;
+}
+
+#descTitle {
+  width: 80%;
+  text-align: left;
+  font-weight: 900;
+}
