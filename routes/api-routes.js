@@ -1,5 +1,8 @@
 // // Requiring our models
 const db = require("../models");
+// require("dotenv").config();
+// const apiKeyM = process.env.API_KEY_MERRIAM;
+// const axios = require("axios").default;
 
 // Routes
 module.exports = (app) => {
@@ -16,6 +19,7 @@ module.exports = (app) => {
       res.render("questions", hbsObject);
     });
   });
+
   // POST route for questions after START
   app.post("/api/questions", (req, res) => {
     db.Animaldb.create({
@@ -72,4 +76,15 @@ module.exports = (app) => {
       },
     }).then(() => res.end());
   });
+
+  // const Merriam = (searchTerm) => {
+  //   axios
+  //     .get(
+  //       `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${searchTerm}?key=${apiKeyM}`
+  //     )
+  //     .then((response) => {
+  //       console.log(response.data[0].shortdef[0]);
+  //       console.log(response.headers);
+  //     });
+  // };
 };
