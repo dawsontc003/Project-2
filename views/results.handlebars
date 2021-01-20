@@ -3,30 +3,29 @@
     <div class="col s8 containerI">
       <article>
         {{#if (lte animalObj.score 40)}}
-          <h2>
-            {{animalObj.name}}
-            , you are a Duck!
-          </h2>
-          <img src="/assets/duck.jpg" alt="duck" class="result" />
+        <h2>
+          {{animalObj.name}}
+          , you are a Duck!
+        </h2>
+        <img src="/assets/duck.jpg" alt="duck" class="result" />
         {{else if (and (gte animalObj.score 50) (lte animalObj.score 60))}}
-          <h2>
-            {{animalObj.name}}
-            , you are Pitbull!
-          </h2>
-          <img src="/assets/pitbull.jpg" alt="pitbull" class="result" />
+        <h2>
+          {{animalObj.name}}
+          , you are Pitbull!
+        </h2>
+        <img src="/assets/pitbull.jpg" alt="pitbull" class="result" />
         {{else if (and (gte animalObj.score 70) (lte animalObj.score 80))}}
-          <h2>
-            {{animalObj.name}}
-            , you are a Snake!
-          </h2>
-          <img src="/assets/snake.jpg" alt="snake" class="result" />
+        <h2>
+          {{animalObj.name}}
+          , you are a Snake!
+        </h2>
+        <img src="/assets/snake.jpg" alt="snake" class="result" />
         {{else}}
-          <h2>
-            Sorry
-            {{animalObj.name}}
-            , you Tiger now!
-          </h2>
-          <img src="/assets/tiger.jpg" alt="tiger" class="result" />
+        <h2>
+          {{animalObj.name}}
+          , you are a Tiger!
+        </h2>
+        <img src="/assets/tiger.jpg" alt="tiger" class="result" />
         {{/if}}
       </article>
       <br />
@@ -35,15 +34,15 @@
   </div>
 </div>
 {{! <div class="containerInfo">
-    <div class="row">
-      <div class="mobileStack">
-        <div class="col s8 containerI">
-          
-          <div id="infotitle">Animal Description</div>
+  <div class="row">
+    <div class="mobileStack">
+      <div class="col s8 containerI">
 
-          <br />
-          <br />
-        </div>
-        </div>
+        <div id="infotitle">Animal Description</div>
+
+        <br />
+        <br />
+      </div>
     </div>
- }}
+  </div>
+  }}
