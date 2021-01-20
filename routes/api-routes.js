@@ -1,6 +1,5 @@
 // // Requiring our models
 const db = require("../models");
-// const merriam = require("./third-party-api-routes").Merriam();
 
 // Routes
 module.exports = (app) => {
