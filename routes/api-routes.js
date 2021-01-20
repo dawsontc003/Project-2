@@ -43,7 +43,7 @@ module.exports = (app) => {
   });
 
   // GET route for results
-  app.get("/api/results/:id", (req, res) => {
+  app.get("/api/results", (req, res) => {
     db.Animaldb.findOne({
       where: { id: req.params.id },
     }).then((data) => {
