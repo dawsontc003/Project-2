@@ -2,20 +2,6 @@
 document.addEventListener("DOMContentLoaded", (e) => {
   console.log("dom loaded!");
 
-  // const update = (input) => {
-  //   fetch("api/questions", {
-  //     method: "PUT",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(input),
-  //   })
-  //     .then(() => {
-  //       window.location.reload();
-  //     })
-  //     .catch((err) => console.error(err));
-  // };
-
   const score = () => {
     console.log("js script working");
     console.log("-----------------");
@@ -79,37 +65,18 @@ document.addEventListener("DOMContentLoaded", (e) => {
     });
   };
   score();
-
-  // const start = () => {
-  //   fetch("api/questions", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(),
-  //   }).catch((err) => console.error(err));
-  // };
-  // const startButton = document.getElementById("button");
-  // $(".start").click(function () {
-  //   startButton.addEventListener("click", () => {
-  //     start();
-  //   });
-  // });
-
-  const animalImage = () => {};
-
-  const animalDescription = () => {
-    fetch("/api/results:id", {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then(() => {
-        // window.location.reload();
-      })
-      .catch((err) => console.error(err));
-  };
 });
+
+// const animalDescription = () => {
+//   fetch("/api/results:id", {
+//     method: "GET",
+//     headers: {
+//       Accept: "application/json",
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify(data),
+//   })
+//     .then(() => {
+//       // window.location.reload();
+//     })
+//     .catch((err) => console.error(err));
