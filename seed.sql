@@ -1,0 +1,1 @@
+INSERT INTO `sequelize_animaldb`.`animaldbs` (`id`, `name`, `a_1`, `a_2`, `a_3`, `score`, `q_1`, `q_2`, `q_3`, `createdAt`, `updatedAt`) VALUES ('1', 'seed', '30', '30', '30', '90', 'What do you do if you disagree with someone at work?', 'What is your favorite Movie genres?', 'Pick a cocktail?', '2021-01-20 01:58:02', '2021-01-20 01:58:02');

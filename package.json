@@ -18,5 +18,8 @@
     "express-handlebars": "^5.2.0",
     "mysql2": "^1.7.0",
     "sequelize": "^4.44.4"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.2.0"
   }
 }
