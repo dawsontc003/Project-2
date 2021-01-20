@@ -45,7 +45,8 @@ module.exports = (app) => {
   // GET route for results
   app.get("/api/results", (req, res) => {
     db.Animaldb.findOne({
-      where: { id: req.params.id },
+      limit: 1,
+      order: [["createdAt", "DESC"]],
     }).then((data) => {
       const resultAnimal = {
         animalObj: data,
