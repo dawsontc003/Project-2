@@ -55,7 +55,7 @@ module.exports = (app) => {
     });
   });
 
-  // GET route for Recent results
+  // GET route for Recent recents
   app.get("/api/recents", (req, res) => {
     // findAll returns all entries for a table when used with no options
     db.Animaldb.findAll({}).then((data) => {
@@ -68,15 +68,15 @@ module.exports = (app) => {
   });
 
   // Delete route for Reset
-  app.delete("/api/recents/:id", (req, res) => {
-    console.log("todos ID:");
-    console.log(req.params.id);
-    db.Animaldb.destroy({
-      where: {
-        id: req.params.id,
-      },
-    }).then(() => res.end());
-  });
+  // app.delete("/api/recents/:id", (req, res) => {
+  //   console.log("todos ID:");
+  //   console.log(req.params.id);
+  //   db.Animaldb.destroy({
+  //     where: {
+  //       id: req.params.id,
+  //     },
+  //   }).then(() => res.end());
+  // });
 
   // const Merriam = (searchTerm) => {
   //   axios
