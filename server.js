@@ -33,6 +33,51 @@ app.engine(
 );
 
 app.set("view engine", "handlebars");
+
+const hbs = exphbs.create({});
+
+hbs.handlebars.registerHelper({
+  eq: (v1, v2) => v1 === v2,
+  ne: (v1, v2) => v1 !== v2,
+  lt: (v1, v2) => v1 < v2,
+  gt: (v1, v2) => v1 > v2,
+  lte: (v1, v2) => v1 <= v2,
+  gte: (v1, v2) => v1 >= v2,
+  and() {
+    return Array.prototype.every.call(arguments, Boolean);
+  },
+  or() {
+    return Array.prototype.slice.call(arguments, 0, -1).some(Boolean);
+  },
+});
+
+// hbs.handlebars.registerHelper("ifCond", function (v1, operator, v2, options) {
+//   switch (operator) {
+//     case "==":
+//       return v1 == v2 ? options.fn(this) : options.inverse(this);
+//     case "===":
+//       return v1 === v2 ? options.fn(this) : options.inverse(this);
+//     case "!=":
+//       return v1 != v2 ? options.fn(this) : options.inverse(this);
+//     case "!==":
+//       return v1 !== v2 ? options.fn(this) : options.inverse(this);
+//     case "<":
+//       return v1 < v2 ? options.fn(this) : options.inverse(this);
+//     case "<=":
+//       return v1 <= v2 ? options.fn(this) : options.inverse(this);
+//     case ">":
+//       return v1 > v2 ? options.fn(this) : options.inverse(this);
+//     case ">=":
+//       return v1 >= v2 ? options.fn(this) : options.inverse(this);
+//     case "&&":
+//       return v1 && v2 ? options.fn(this) : options.inverse(this);
+//     case "||":
+//       return v1 || v2 ? options.fn(this) : options.inverse(this);
+//     default:
+//       return options.inverse(this);
+//   }
+// });
+
 app.use(express.static("public/assets"));
 
 // Static directory

@@ -17,7 +17,6 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "mysql2": "^1.7.0",
-    "pexels": "^1.0.1",
     "sequelize": "^4.44.4"
   }
 }

@@ -35,6 +35,10 @@ section p {
   margin: 150px;
 }
 
+article h2 {
+  text-align: center;
+}
+
 #Test {
   margin-left: 100px;
   margin-top: -100px;
@@ -58,19 +62,17 @@ section p {
   border-style: solid;
   border-color: black;
   border-width: 5px;
-  left: 150px;
-  height: 300px;
-  width: 250%;
+  height: auto;
+  float: none !important;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.mobileStack {
-  margin-left: 650px;
-  margin-top: 100px;
-}
-
-.mobileStack1 {
-  margin-left: 650px;
-  margin-top: 100px;
+.result {
+  margin-top: 15px;
+  max-width: 100%;
+  height: auto;
 }
 
 #button {
