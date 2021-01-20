@@ -31,6 +31,7 @@ app.engine(
     },
   })
 );
+
 app.set("view engine", "handlebars");
 app.use(express.static("public/assets"));
 

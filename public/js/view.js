@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     console.log("js script working");
     console.log("-----------------");
     totalScore = [];
-    const playerName = "AppPost";
+    const playerName = "AppPost5";
     const submitQ1 = document.getElementById("submit");
     $('.resultscore1 input[type="radio"]').click(function () {
       const answervalue1 = $(this).val();
