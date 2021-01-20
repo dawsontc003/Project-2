@@ -23,6 +23,12 @@ nav {
   background-color: #0796f6;
 }
 
+#quesImage {
+  float: right;
+  margin-right: 25%;
+  width: 40%;
+}
+
 /* Specific font for About Me */
 section h1 {
   font-size: 50px;

@@ -1,5 +1,5 @@
 <head>
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/public/css/style.css" />
 </head>
 
 <h2>
@@ -11,14 +11,14 @@
     <div class="row">
       <div class="input-field col s6">
         <input id="username" type="text" class="validate">
-          <label class="active" for="username">Your Name</label>
+        <label class="active" for="username">Your Name</label>
       </div>
     </div>
   </form>
 </div>
 
 <div>
-  <img id="" src="/assets/tempsnip.png" alt="">
+  <img id="quesImage" src="/assets/tempsnip.png" alt="">
   {{#each animalObj}}
   <p>
     {{this.q_1}}
@@ -91,6 +91,6 @@
     </div>
   </form>
 </div>
-<button id="submit" class="btn postBTN waves-effect waves-light"><a href= "/api/results">
-  Submit</a><i class="material-icons right">send</i>
+<button id="submit" class="btn postBTN waves-effect waves-light"><a href="/api/results">
+    Submit</a><i class="material-icons right">send</i>
 </button>
